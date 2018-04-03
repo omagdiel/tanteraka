@@ -1,24 +1,33 @@
-# README
+NAV BAR
+  left, company logo, phone
+  HOME
+  PROJECTS
+  FLOOR PLANS
+  CONTACT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HOME
+  about me
 
-Things you may want to cover:
+PROJECTS
+  {Main image, title, info(md), multiple interior photos(moveable)}
+    Project NavBar
+    Homes, Basement, Deck, Custom Work
+  main pictures click
+    two columns
+      more detail
+      pictures of inside
 
-* Ruby version
+FLOOR PLANS
+  {Main Image, title, interior layout images(moveable), info(md) }
+  Floor Plans NavBar
+    layout the plans and expand on click
 
-* System dependencies
+CONTACT
+  static contact info
+    phone number
+    social media derek's facebook
+  action mailer "tanterakaconstruction@gmail.com" form
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ADMIN USER
+  dynamically update floor plans and projects
+  dynamically adjust photos
