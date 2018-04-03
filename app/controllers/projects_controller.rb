@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
   def show
 
   end
-  
+
   def edit
 
   end
@@ -40,7 +40,10 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-
+    @project.destroy
+    respond_to do |format|
+      format.html{ redirect_to projects_path, notice: 'Record was successfully destroyed.'}
+    end
   end
 
   private
