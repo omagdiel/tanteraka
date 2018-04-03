@@ -1,0 +1,25 @@
+<%= form_with(model: @project, local: true) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :info %>
+    <%= f.text_field :info %>
+  </div>
+  <div>
+    <%= f.label :main_img %>
+    <%= f.text_field :main_img %>
+  </div>
+  <div>
+    <%= f.label :img %>
+    <%= f.text_field :img %>
+    <%#= link_to_remove_association 'Remove Image', f %>
+  </div>
+  <div>
+    <%#= link_to_add_association 'Add Image', f, :img %>
+  </div>
+  <div>
+    <%= f.submit 'Save Project' %>
+  </div>
+<% end %>
