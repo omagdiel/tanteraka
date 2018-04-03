@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :layouts
+  resources :floor_plans
   resources :projects
   get 'pages/home'
 

@@ -29,5 +29,6 @@ CONTACT
   action mailer "tanterakaconstruction@gmail.com" form
 
 ADMIN USER
+  custom links to CRUD
   dynamically update floor plans and projects
   dynamically adjust photos
