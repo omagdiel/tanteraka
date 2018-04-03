@@ -24,15 +24,6 @@ ActiveRecord::Schema.define(version: 20180403192037) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "layouts", force: :cascade do |t|
-    t.string "title"
-    t.text "info"
-    t.text "main_img"
-    t.text "img"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "info"
