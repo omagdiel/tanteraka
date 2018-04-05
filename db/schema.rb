@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405152316) do
+ActiveRecord::Schema.define(version: 20180405161921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "floor_plan_images", force: :cascade do |t|
+    t.text "image"
+    t.bigint "floor_plan_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["floor_plan_id"], name: "index_floor_plan_images_on_floor_plan_id"
+  end
 
   create_table "floor_plans", force: :cascade do |t|
     t.string "title"
@@ -50,5 +58,6 @@ ActiveRecord::Schema.define(version: 20180405152316) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "floor_plan_images", "floor_plans"
   add_foreign_key "project_images", "projects"
 end
