@@ -1,6 +1,6 @@
 <h1>THIS IS THE FLOOR PLAN INDEX</h1>
 
-<%= @floor_plans.each do |fp| %>
+<% @floor_plans.each do |fp| %>
   <div>
     <%= link_to fp.title, floor_plan_path(fp) %>
   </div>

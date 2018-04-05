@@ -1,1 +1,10 @@
 @import "bootstrap";
+
+@media (min-width: 48em) {
+  .navbar-brand {
+    float: left;
+  }
+  .navbar-nav {
+    float: right;
+  }
+}
