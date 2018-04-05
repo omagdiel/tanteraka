@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    3.times { @project.project_images.build }
   end
 
   def create
