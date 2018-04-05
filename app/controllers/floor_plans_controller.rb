@@ -5,6 +5,47 @@ class FloorPlansController < ApplicationController
     @floor_plans = FloorPlan.all
   end
 
+  def show
+
+  end
+
+  def edit
+
+  end
+
+  def new
+    @floor_plan = FloorPlan.new
+  end
+
+  def create
+    @floor_plan = FloorPlan.new(floor_plan_params)
+
+    respond_to do |format|
+      if @floor_plan.save
+        format.html{ redirect_to @floor_plan, notice: 'Your Floor Plan was successfully created.'}
+      else
+        format.html{ render :new }
+      end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @floor_plan.update(floor_plan_params)
+        format.html{ redirect_to @floor_plan, notice: 'Your Floor Plan was successfully updated.'}
+      else
+        format.html{ render :edit }
+      end
+    end
+  end
+
+  def destroy
+    @floor_plan.destroy
+    respond_to do |format|
+      format.html{ redirect_to floor_plans_path, notice: 'Record was successfully destroyed.'}
+    end
+  end
+
   private
 
   def floor_plan_params

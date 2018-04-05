@@ -1,0 +1,25 @@
+<%= form_with(model: @floor_plan, local: true) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :information %>
+    <%= f.text_field :info %>
+  </div>
+  <div>
+    <%= f.label :main_image %>
+    <%= f.text_field :img %>
+  </div>
+  <div>
+    <%= f.fields_for :floor_plan_images do |fp_img_form| %>
+      <%= render 'fp_image_fields', f: fp_img_form %>
+    <% end %>
+    <div>
+      <%#= link_to_add_association 'Add Image', f, :image %>
+    </div>
+  </div>
+  <div>
+    <%= f.submit 'Save Floor Plan' %>
+  </div>
+<% end %>
