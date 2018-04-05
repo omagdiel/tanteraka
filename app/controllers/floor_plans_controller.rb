@@ -1,5 +1,5 @@
 class FloorPlansController < ApplicationController
-  before_action :set_floor_plans_item, only:[:edit, :update, :show, :destroy]
+  before_action :set_floor_plan_item, only:[:edit, :update, :show, :destroy]
 
   def index
     @floor_plans = FloorPlan.all
@@ -15,6 +15,7 @@ class FloorPlansController < ApplicationController
 
   def new
     @floor_plan = FloorPlan.new
+    3.times { @floor_plan.floor_plan_images.build }
   end
 
   def create
