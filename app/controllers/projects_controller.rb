@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:title,
                                     :info,
                                     :main_img,
-                                    :img
+                                    projects_attributes: [:image]
                                   )
   end
 

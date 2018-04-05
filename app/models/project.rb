@@ -6,4 +6,6 @@ class Project < ApplicationRecord
   validates_presence_of :title,
                         :info,
                         :main_img
+
+  mount_uploader :main_img, ProjectUploader
 end

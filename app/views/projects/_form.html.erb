@@ -9,7 +9,7 @@
   </div>
   <div>
     <%= f.label :main_image %>
-    <%= f.text_field :img %>
+    <%= f.file_field :main_img, style: 'display:none;' %>
   </div>
   <div>
     <%= f.fields_for :project_images do |project_img_form| %>

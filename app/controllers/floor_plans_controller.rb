@@ -53,7 +53,7 @@ class FloorPlansController < ApplicationController
     params.require(:floor_plan).permit(:title,
                                     :info,
                                     :main_img,
-                                    :img
+                                    projects_attributes: [:image]
                                   )
   end
 

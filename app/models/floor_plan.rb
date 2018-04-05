@@ -6,4 +6,7 @@ class FloorPlan < ApplicationRecord
   validates_presence_of :title,
                         :info,
                         :main_img
+
+
+  mount_uploader :main_img, FloorPlanUploader
 end
