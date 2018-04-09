@@ -1,7 +1,16 @@
 <h1>THIS IS THE FLOOR PLAN INDEX</h1>
 
-<% @floor_plans.each do |fp| %>
-  <div>
-    <%= link_to fp.title, floor_plan_path(fp) %>
-  </div>
-<% end%>
+<div class="row">
+  <% @floor_plans.each do |fp| %>
+    <div class="col-md-4">
+      <div class="card">
+        <%#= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%'%>
+        <p class="card-text">
+          <div>
+            <%= link_to fp.title, floor_plan_path(fp) %>
+          </div>
+        </p>
+      </div>
+    </div>
+  <% end%>
+</div>
