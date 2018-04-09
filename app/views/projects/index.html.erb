@@ -5,11 +5,11 @@
     <div class="col-md-4">
       <div class="card">
         <%#= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%'%>
-        <p class="card-text">
+
           <div>
-            <%= link_to project.title, project_path(project) %>
+            <%= link_to image_tag(project.main_img), project_path(project) %>
           </div>
-        </p>
+
       </div>
     </div>
   <% end%>

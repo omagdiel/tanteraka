@@ -1,19 +1,34 @@
-<div>
-  <p>
-    <%= @project.title %>
-  </p>
-  <p>
-    <%= @project.info %>
-  </p>
-  <p>
-    <%= image_tag @project.main_img %>
-  </p>
-  <% @project.project_images.each do |t| %>
-<%#*    <p>%><%#= image_tag t.image %><%#*</p>%>
-  <% end %>
-
-  <span>
-    <%= link_to "Edit", edit_project_path(@project) %>
-    <%= link_to "Delete", @project, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
-  </span>
+<div class="row">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <h3><%= @project.title %></h3>
+      <%= image_tag @project.main_img %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="container">
+      <% @project.project_images.each do |t| %>
+        <div class="card">
+          <%= image_tag t.image %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="container">
+      <div class="jumbotron">
+        <p>
+          <%= @project.info %>
+        </p>
+        <p>
+          <%= link_to "Edit This Project", edit_project_path(@project) %>
+        </p>
+        <p>
+          <%= link_to "Delete This Project", @project, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
