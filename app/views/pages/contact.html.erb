@@ -7,11 +7,18 @@
         <%= form_for @message, url: contact_pages_path do |f| %>
           <%= notice %>
           <%= @message.errors.full_messages.join(', ') %>
-
-          <%= f.text_field :name, placeholder: 'name' %>
-          <%= f.email_field :email, placeholder: 'email' %>
-          <%= f.text_area :body, placeholder: 'body' %>
-          <%= f.submit 'Send' %>
+          <div class="form-group">
+            <%= f.text_field :name, placeholder: 'name' %>
+          </div>
+          <div class="form-group">
+            <%= f.email_field :email, placeholder: 'email' %>
+          </div>
+          <div class="form-group">
+            <%= f.text_area :body, placeholder: 'body' %>
+          </div>
+          <div class="form-group">
+            <%= f.submit 'Send' %>
+          </div>
         <% end %>
       </div>
     </div>
