@@ -20,7 +20,7 @@
     <div class="container">
       <div class="jumbotron">
         <p>
-          <%= @project.info %>
+          <%= markdown @project.info %>
         </p>
         <p>
           <%= link_to "Edit This Project", edit_project_path(@project) %>
