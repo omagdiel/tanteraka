@@ -8,7 +8,12 @@
     <div class="justify-content-end">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <%= user_nav_helper 'nav-link', 'li' %>
+          <% if current_user %>
+            <li class="nav-link">
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            </li>
+            <%= user_nav_helper 'nav-link', 'li' %>
+          <% end %>
           <%= nav_helper 'nav-link', 'li' %>
         </ul>
       </div>
