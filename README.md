@@ -34,10 +34,11 @@ x     add link_to_add_association
 -   static contact info
 x     phone number
 -     social media derek's facebook
--   action mailer "tanterakaconstruction@gmail.com" form
+x   action mailer "tanterakaconstruction@gmail.com" form
 
 - ADMIN USER
--   blocked acces to CRUD
+-   blocked access to CRUD
+-   Block access to user registration
 X   custom links to CRUD
 X   dynamically update floor plans and projects
 X   dynamically adjust photos

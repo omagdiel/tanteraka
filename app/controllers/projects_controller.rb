@@ -9,6 +9,13 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def sort
+    params[:order].each do |key, value|
+      Project.find(value[:id]).update(position: value[:position])
+    end
+    render body: nil
+  end
+
   def create
     @project = Project.new(project_params)
 

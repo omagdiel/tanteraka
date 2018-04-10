@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  resources :floor_plans
-  resources :projects
+
+  resources :floor_plans do
+    put :sort, on: :collection
+  end
+
+  resources :projects do
+    put :sort, on: :collection
+  end
+
   resources :pages do
     collection do
       get 'contact-me', to: 'pages#contact', as: 'contact'

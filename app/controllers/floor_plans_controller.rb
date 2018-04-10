@@ -17,6 +17,13 @@ class FloorPlansController < ApplicationController
     @floor_plan = FloorPlan.new
   end
 
+  def sort
+    params[:order].each do |key, value|
+      FloorPlan.find(value[:id]).update(position: value[:position])
+    end
+    render body: nil
+  end
+
   def create
     @floor_plan = FloorPlan.new(floor_plan_params)
 

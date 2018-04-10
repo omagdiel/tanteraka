@@ -3,9 +3,7 @@
 <div class="row sortable">
   <% @projects.each do |project| %>
     <div class="col-md-4">
-      <div class="card">
-        <%#= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%'%>
-
+      <div class="card" data-id="<%= project.id %>">
           <div>
             <%= link_to image_tag(project.main_img), project_path(project) %>
           </div>
