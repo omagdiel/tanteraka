@@ -2,7 +2,7 @@ class FloorPlansController < ApplicationController
   before_action :set_floor_plan_item, only:[:edit, :update, :show, :destroy]
 
   def index
-    @floor_plans = FloorPlan.all
+    @floor_plans = FloorPlan.by_position
   end
 
   def show

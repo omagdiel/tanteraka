@@ -8,4 +8,8 @@ class Project < ApplicationRecord
                         # :main_img
 
   mount_uploader :main_img, ProjectUploader
+
+  def self.by_position
+    order("position ASC")
+  end
 end

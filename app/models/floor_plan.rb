@@ -9,4 +9,8 @@ class FloorPlan < ApplicationRecord
 
 
   mount_uploader :main_img, FloorPlanUploader
+
+  def self.by_position
+    order("position ASC")
+  end
 end
