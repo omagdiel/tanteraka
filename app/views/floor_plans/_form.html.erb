@@ -14,7 +14,7 @@
   <div>
     <div>
       <%= f.fields_for :floor_plan_images do |fp_img_form| %>
-        <%= render 'fp_image_fields', f: fp_img_form %>
+        <%= render 'floor_plan_image_fields', f: fp_img_form %>
       <% end %>
       <div>
         <%= link_to_add_association 'Add Image', f, :floor_plan_images %>
