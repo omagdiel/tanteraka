@@ -8,15 +8,17 @@ class PagesController < ApplicationController
   end
 
   def create
-    @message = Message.new message_params
-
-    if @message.valid?
-      redirect_to pages_contact_path, notice: "Your message was sent to us and we will get back with you soon."
-    else
-      render :new
+    @message = Page.new(message_params)
+    respond_to do |format|
+      if @message.valid?
+        ContactMailer.email(@message).deliver_now
+        format.html{ redirect_to pages_contact_url, notice: "Your message was sent to us and we will get back with you soon." }
+      else
+        render :new
+      end
     end
   end
-  
+
   private
 
   def message_params

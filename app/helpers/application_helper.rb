@@ -39,7 +39,7 @@ end
         title: 'Floor Plans'
       },
       {
-        url: pages_contact_path,
+        url: contact_pages_path,
         title: 'Contact'
       }
     ]
