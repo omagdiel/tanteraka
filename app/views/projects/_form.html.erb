@@ -12,11 +12,13 @@
     <%= f.file_field :main_img %>
   </div>
   <div>
-    <%= f.fields_for :project_images do |project_img_form| %>
-      <%= render 'project_image_fields', f: project_img_form %>
-    <% end %>
     <div>
-      <%#= link_to_add_association 'Add Image', f, :image %>
+      <%= f.fields_for :project_images do |project_img_form| %>
+        <%= render 'project_image_fields', f: project_img_form %>
+      <% end %>
+      <div>
+        <%= link_to_add_association 'Add Image', f, :project_images %>
+      </div>
     </div>
   </div>
   <div>

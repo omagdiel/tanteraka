@@ -11,7 +11,7 @@ x   CONTACT
 -   about me
 
 - PROJECTS
--   {Main image, title, info(md), multiple interior photos(moveable)}
+x   {Main image, title, info(md), multiple interior photos(moveable)}
 -    Project NavBar
 -    Homes, Basement, Deck, Custom Work
 x   main pictures click
@@ -19,16 +19,16 @@ x     two columns
 x       more detail
 x       pictures of inside
 
--  NEW Project
--    Add link_to_add_association
+x  NEW Project
+x    Add link_to_add_association
 
 - FLOOR PLANS
--   {Main Image, title, interior layout images(moveable), info(md) }
+x   {Main Image, title, interior layout images(moveable), info(md) }
 -   Floor Plans NavBar
 x     layout the plans and expand on click
 
--   NEW floorplan
--     add link_to_add_association
+x   NEW floorplan
+x     add link_to_add_association
 
 - CONTACT
 -   static contact info
@@ -37,6 +37,7 @@ x     phone number
 -   action mailer "tanterakaconstruction@gmail.com" form
 
 - ADMIN USER
+-   blocked acces to CRUD
 X   custom links to CRUD
 X   dynamically update floor plans and projects
 X   dynamically adjust photos

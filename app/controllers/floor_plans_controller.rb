@@ -15,7 +15,6 @@ class FloorPlansController < ApplicationController
 
   def new
     @floor_plan = FloorPlan.new
-    3.times { @floor_plan.floor_plan_images.build }
   end
 
   def create
@@ -53,7 +52,7 @@ class FloorPlansController < ApplicationController
     params.require(:floor_plan).permit(:title,
                                     :info,
                                     :main_img,
-                                    projects_attributes: [:image]
+                                    floor_plan_images_attributes: [:id, :image, :_destroy]
                                   )
   end
 

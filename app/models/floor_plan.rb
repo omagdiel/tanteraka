@@ -4,8 +4,8 @@ class FloorPlan < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: lambda {|attrs| attrs['image'].blank?}
   validates_presence_of :title,
-                        :info
-                        # :main_img
+                        :info,
+                        :main_img
 
 
   mount_uploader :main_img, FloorPlanUploader

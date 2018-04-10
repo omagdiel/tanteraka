@@ -7,7 +7,6 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    3.times { @project.project_images.build }
   end
 
   def create
@@ -53,7 +52,7 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:title,
                                     :info,
                                     :main_img,
-                                    projects_attributes: [:image]
+                                    project_images_attributes: [:id, :image, :_destroy]
                                   )
   end
 
