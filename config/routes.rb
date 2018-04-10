@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   resources :projects
   resources :pages do
     collection do
-      get 'contact'
-      post 'contact'
+      get 'contact-me', to: 'pages#contact', as: 'contact'
+      post 'contact-me', to: 'pages#create', as: 'create'
     end
   end
+  # get 'contact-me', to: 'pages#contact', as: 'contact'
+  # post 'contact-me', to: 'pages#create', as: 'create'
+
   get 'pages/home'
 
   # get 'pages/contact'

@@ -12,9 +12,9 @@ class PagesController < ApplicationController
     respond_to do |format|
       if @message.valid?
         ContactMailer.email(@message).deliver_now
-        format.html{ redirect_to pages_contact_url, notice: "Your message was sent to us and we will get back with you soon." }
+        format.html{ redirect_to contact_pages_url, notice: "Your message was sent to us and we will get back with you soon." }
       else
-        render :new
+        render :contact
       end
     end
   end
@@ -22,6 +22,6 @@ class PagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:name, :email, :body)
+    params.require(:page).permit(:name, :email, :body)
   end
 end
