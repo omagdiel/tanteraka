@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  devise_for :users
   resources :floor_plans do
     put :sort, on: :collection
   end
