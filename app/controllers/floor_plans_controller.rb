@@ -1,6 +1,8 @@
 class FloorPlansController < ApplicationController
   before_action :set_floor_plan_item, only:[:edit, :update, :show, :destroy]
 
+  access all: [:show, :index], admin: :all, message: "You are not authorized to access this page"
+
   def index
     @floor_plans = FloorPlan.by_position
   end

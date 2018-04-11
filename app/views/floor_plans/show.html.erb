@@ -23,12 +23,14 @@
         <p>
           <%= markdown @floor_plan.info %>
         </p>
-        <p>
-          <%= link_to "Edit This Project", edit_floor_plan_path(@floor_plan) %>
-        </p>
-        <p>
-          <%= link_to "Delete This Project", @floor_plan, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
-        </p>
+        <% if logged_in?(:admin) %>
+          <p>
+            <%= link_to "Edit This Project", edit_floor_plan_path(@floor_plan) %>
+          </p>
+          <p>
+            <%= link_to "Delete This Project", @floor_plan, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+          </p>
+        <%end%>
       </div>
     </div>
   </div>

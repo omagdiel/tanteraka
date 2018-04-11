@@ -22,12 +22,14 @@
         <p>
           <%= markdown @project.info %>
         </p>
-        <p>
-          <%= link_to "Edit This Project", edit_project_path(@project) %>
-        </p>
-        <p>
-          <%= link_to "Delete This Project", @project, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
-        </p>
+        <%if logged_in?(:admin)%>
+          <p>
+            <%= link_to "Edit This Project", edit_project_path(@project) %>
+          </p>
+          <p>
+            <%= link_to "Delete This Project", @project, method: :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+          </p>
+        <%end%>
       </div>
     </div>
   </div>

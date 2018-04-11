@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project_item, only:[:edit, :update, :show, :destroy]
 
+  access all: [:show, :index], admin: :all, message: "You are not authorized to access this page"
+
   def index
     @projects = Project.by_position
   end

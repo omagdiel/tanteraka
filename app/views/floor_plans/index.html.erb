@@ -1,6 +1,6 @@
 <h1>THIS IS THE FLOOR PLAN INDEX</h1>
 
-<div class="row sortable">
+<div class="row <%= "sortable" if logged_in?(:admin) %>" >
   <% @floor_plans.each do |fp| %>
     <div class="col-md-4">
       <div class="card" data-id="<%= fp.id %>">
