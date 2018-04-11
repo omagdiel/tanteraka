@@ -1,5 +1,5 @@
-<div>
+<div class="form-group nested-fields">
   <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= link_to_remove_association 'Remove Image', f %>
+  <%= f.file_field :image, class: 'form-control' %>
+  <%= link_to_remove_association 'Remove Image', f, class: 'btn btn-warning' %>
 </div>
