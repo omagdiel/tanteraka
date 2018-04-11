@@ -36,9 +36,9 @@ x     phone number
 -     social media derek's facebook
 x   action mailer "tanterakaconstruction@gmail.com" form
 
-- ADMIN USER
--   blocked access to CRUD
--   Block access to user registration
+x ADMIN USER
+x   blocked access to CRUD
+x   Block access to user registration
 X   custom links to CRUD
 X   dynamically update floor plans and projects
 X   dynamically adjust photos
