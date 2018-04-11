@@ -1,19 +1,28 @@
-- NAV BAR
+- Styles
+  - NAV BAR
+    - Active
+  - Forms
+  - Fonts
+
+  TODO
+- form validation notices  
+
+x NAV BAR
 x  left, company logo, phone
 x  HOME
 x   PROJECTS
 x   FLOOR PLANS
 x   CONTACT
--   Style Navbar
+
 
 - HOME
--   Image Carousel
+x   Image Carousel
 -   about me
 
 - PROJECTS
 x   {Main image, title, info(md), multiple interior photos(moveable)}
 -    Project NavBar
--    Homes, Basement, Deck, Custom Work
+     Homes, Basement, Deck, Custom Work
 x   main pictures click
 x     two columns
 x       more detail
