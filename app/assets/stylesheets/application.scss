@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 @import "gritter";
 
 @media (min-width: 48em) {
@@ -28,4 +29,13 @@ body {
 .jumbotron img {
   height: 100%;
   width: 100%;
+}
+
+/*
+ * Custom styles
+ */
+
+.social-links a {
+  font-size: 2.5em;
+  padding-right: 20px;
 }

@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="jumbotron">
-        <h3>Email Us</h3>
+        <h2>Email Us</h2>
         <%= form_for @message, url: contact_pages_path do |f| %>
           <%= notice %>
           <%= @message.errors.full_messages.join(', ') %>
@@ -24,8 +24,19 @@
     </div>
     <div class="col-md-6">
       <div class="jumbotron">
-        <h3>Call Us</h3>
-        <p><%= number_to_phone "801-819-5154" %></p>
+        <h2>Call Us</h2>
+        <p style="font-size: 1.5em"><%= number_to_phone "801-819-5154" %></p>
+        <h2>Join Us On Social Media</h2>
+        <p class="social-links">
+          <span>
+            <%#= link_to fa_icon('facebook'), "https://www.facebook.com/owen.magdiel" %>
+            <a href="https://www.facebook.com/owen.magdiel"><%= fa_icon "facebook-square" %></a>
+          </span>
+          <span>
+            <%#= link_to fa_icon('linkedin'), "https://www.linkedin.com/in/owen-magdiel-362379b6" %>
+            <a href="https://www.linkedin.com/in/owen-magdiel-362379b6"><%= fa_icon "linkedin" %></a>
+         </span>
+       </p>
       </div>
     </div>
   </div>
